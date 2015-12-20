@@ -8,7 +8,6 @@ class Mailboxer::Conversation < ActiveRecord::Base
   #----------------------------------------------
 
   attr_accessible :subject if Mailboxer.protected_attributes?
-  attr_accessible :booking_id
 
   has_many :opt_outs, :dependent => :destroy, :class_name => "Mailboxer::Conversation::OptOut"
   has_many :messages, :dependent => :destroy, :class_name => "Mailboxer::Message"
