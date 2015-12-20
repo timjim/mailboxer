@@ -5,7 +5,8 @@ class AddDeliveryTrackingInfoToMailboxerReceipts < ActiveRecord::Migration
     add_column :mailboxer_receipts, :message_id, :string
 
     #FROMIGO EDIT
-    add_column :mailboxer_conversations, :conversationable_id, :integer
-    add_column :mailboxer_conversations, :conversationable_type, :string
+    # add_column :mailboxer_conversations, :conversationable_id, :integer
+    # add_column :mailboxer_conversations, :conversationable_type, :string
+    add_column :mailboxer_conversations, :booking_id, :integer
   end
 end

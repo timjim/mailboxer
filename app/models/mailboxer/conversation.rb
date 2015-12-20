@@ -3,7 +3,8 @@ class Mailboxer::Conversation < ActiveRecord::Base
 
   #FROMIGO EDIT
   #----------------------------------------------
-  belongs_to :conversationable, polymorphic: true
+  # belongs_to :conversationable, polymorphic: true
+  belongs_to :booking
   #----------------------------------------------
 
   attr_accessible :subject if Mailboxer.protected_attributes?
