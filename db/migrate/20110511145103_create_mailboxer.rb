@@ -6,6 +6,7 @@ class CreateMailboxer < ActiveRecord::Migration
       t.column :subject, :string, :default => ""
       t.column :created_at, :datetime, :null => false
       t.column :updated_at, :datetime, :null => false
+      t.column :booking_id, :integer
     end    
   	#Receipts
     create_table :mailboxer_receipts do |t|
