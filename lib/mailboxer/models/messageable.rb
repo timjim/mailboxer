@@ -67,7 +67,7 @@ module Mailboxer
           :subject    => subject,
           #FROMIGO EDIT
           #--------------------------------------------
-          :booking => booking,
+          :booking_id => booking.id,
           #--------------------------------------------
           :created_at => message_timestamp,
           :updated_at => message_timestamp
