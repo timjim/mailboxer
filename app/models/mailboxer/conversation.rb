@@ -1,12 +1,6 @@
 class Mailboxer::Conversation < ActiveRecord::Base
   self.table_name = :mailboxer_conversations
 
-  #FROMIGO EDIT
-  #----------------------------------------------
-  # belongs_to :conversationable, polymorphic: true
-  belongs_to :booking
-  #----------------------------------------------
-
   attr_accessible :subject if Mailboxer.protected_attributes?
 
   has_many :opt_outs, :dependent => :destroy, :class_name => "Mailboxer::Conversation::OptOut"
