@@ -10,7 +10,7 @@ module Mailboxer
       return false unless Mailboxer.uses_emails
 
       receipts.map do |receipt|
-        email_to = receipt.receiver.send(Mailboxer.email_method, mailable)
+        email_to = receipt.receiver.send(Mailboxer.email_method, mailable) if receiver != current_user
         send_email(receipt) if email_to.present?
       end
     end
