@@ -32,7 +32,7 @@ class Mailboxer::Message < Mailboxer::Notification
     sender_receipt = build_receipt(sender, 'sentbox', true)
 
     #Grab a copy of the temp receipts for mailing purposes
-    tims_temp_receipts = temp_receipts
+    tims_temp_receipts = temp_receipts.clone
 
     temp_receipts << sender_receipt
 
